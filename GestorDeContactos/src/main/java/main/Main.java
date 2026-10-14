@@ -1,13 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package main;
 
-/**
- *
- * @author mantr
- */
+import controlador.ControladorAgenda;
+import modelo.Agenda;
+import vista.VistaAgenda;
+
 public class Main {
-    
+
+    public static void main(String[] args) {
+
+        Agenda miAgenda = new Agenda();
+
+        VistaAgenda miVista = new VistaAgenda();
+
+        ControladorAgenda controlador = new ControladorAgenda(miVista, miAgenda);
+
+        controlador.iniciar();
+    }
 }
